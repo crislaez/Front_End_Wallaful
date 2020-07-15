@@ -1,0 +1,12 @@
+.section-productos{
+    width: 100%;
+    min-height: 800px;
+    background: #F3F3F3;   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.div-vacio{
+    width: 6.5%;
+}

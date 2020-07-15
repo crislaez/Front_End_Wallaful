@@ -1,0 +1,171 @@
+header{
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #F7F7F7;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: white;
+}
+
+.header-uno{
+    width: 4%;
+    height: 70px;
+}
+
+.header-uno div{
+    width: 60%;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 25%;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0px 0px 3px gray;
+    background:#17BC9D;
+
+}
+
+.header-dos{
+    width: 60.5%;
+    height: 70px;
+    /* background: gray; */
+}
+
+.header-dos legend{
+    width: 99%;
+    margin-left: 1%;
+    height: 44px;
+    background: #EAEFF1;
+    margin-top: 13px;
+    border-radius: 30px;
+}
+
+.header-dos label{
+    font-size: 20px;
+    margin-left: 1%;
+}
+
+.header-dos input{
+    width: 97%;
+    border-radius: 30px;
+    height: 35px;
+    margin-top: 5px;
+    background: none;
+    /* background: blue; */
+    border: none;
+}
+
+.header-dos input::placeholder{
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.header-tres{
+    width: 9%;
+    height: 70px;
+    /* background: blue; */
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+
+.header-tres:hover{
+    border-bottom: 2px solid black;
+}
+
+.header-tres div{
+    align-self: center;
+}
+
+.icono-mensaje{
+    font-size: 25px;
+    margin-left: 15%;
+}
+
+.texto-mensaje{
+    font-size: 14px;
+    margin-left: 5%;
+    color: #5C5C5C;
+}
+
+.header-cuatro{
+    width: 25.5%;
+    height: 70px;
+    /* background: blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-cuatro div{
+    align-self: center;
+}
+
+.header-cuatro div input, .header-cuatro div button{
+    width: 100%;
+    height: 45px;
+    border-radius: 30px;       
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.header-cuatro div input, .header-cuatro div button:focus{
+    outline : none;
+}
+
+.boton-registro{
+    width: 55%;
+}
+
+.boton-subir-producto{
+    width: 40%;
+}
+
+.boton-izquierda{
+    border: 1px solid #17BC9D;
+    background: white;
+    color: #17BC9D;
+}
+
+.boton-izquierda:hover{
+    background: #17BC9D;
+    color: white;
+}
+
+.boton-derecha{
+    background: #17BC9D;
+    color: white;
+    transition: all 300ms;
+    border:none;
+}
+
+.boton-derecha div{
+    width: 12%;
+    border-radius: 50%;
+    margin-left: 5%;
+    border: 1px solid white;
+    transition: all 300ms;
+    float: left;
+}
+
+
+.boton-derecha:hover{
+    background: #21947F;
+}
+
+.div-mizona{
+    display: flex;
+    flex-direction: row;
+    height: 72px;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+    /* background: blue; */
+}
+
+.div-mizona:hover{
+    border-bottom: 2px solid black;
+}
