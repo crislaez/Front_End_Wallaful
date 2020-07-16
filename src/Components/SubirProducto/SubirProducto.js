@@ -1,10 +1,14 @@
 import React,{useState, useEffect} from 'react';
 //css
 import './SubirProducto.css';
+//ruter
 import {withRouter} from 'react-router-dom';
+//arrays para los select
 import {arraCategorias, provincias} from '../../Services/arrayCategorias';
+//alertas
 import swal from 'sweetalert';
-
+//Services
+import {addProduct} from '../../Services/Services';
 
 const SubirProducto = (props) => {
 
@@ -49,30 +53,47 @@ const SubirProducto = (props) => {
         else if(!descripcion){
             swal('Oops','Selecciona la descripcion','error')
         }
+        else if(!foto1 && !foto2 && !foto3 && !foto4 && !foto5 && !foto6 && !foto7 && !foto8 && !foto9 && !foto10){
+            swal('Oops','Selecciona almenos una foto','error')
+        }
         else if(!ubicacion){
             swal('Oops','Selecciona la ubicacion','error')
         }
         else{
-            console.log(localStorage.getItem('primariwallafull'))
-            console.log(categoria)
-            console.log(tipoProducto)
-            console.log(precio)
-            console.log(moneda)
-            console.log(descripcion)
-            console.log(foto1)
-            console.log(foto2)
-            console.log(foto3)
-            console.log(foto4)
-            console.log(foto5)
-            console.log(foto6)
-            console.log(foto7)
-            console.log(foto8)
-            console.log(foto9)
-            console.log(foto10)
-            console.log(ubicacion);
+            let data = new FormData();
+            data.append('id_producto','');
+            data.append('id_usuario',localStorage.getItem('primariwallafull'));
+            data.append('categoria',categoria);
+            data.append('tipo_producto',tipoProducto);
+            data.append('precio',precio);
+            data.append('moneda',moneda);
+            data.append('descripcion',descripcion);
+            data.append('foto_1',foto1);
+            data.append('foto_2',foto2);
+            data.append('foto_3',foto4);
+            data.append('foto_4',foto4);
+            data.append('foto_5',foto5);
+            data.append('foto_6',foto6);
+            data.append('foto_7',foto7);
+            data.append('foto_8',foto8);
+            data.append('foto_9',foto9);
+            data.append('foto_10',foto10);
+            data.append('ubicacion',ubicacion);
+         
+            addProduct(data)
+            .then(response => {
+                if(response.success){
+                    swal('Ok','Producto subido correctamente','success');
+                    props.history.push('/productos/mizona');
+                    window.location.reload(true)
+                }
+                else{
+                    swal('Oops','Error al subir el producto','error')
+                }
+            })
+            .catch(err => console.log(err))
         }
-        
-        //limpiamos todos los campos
+
         let formulario = document.querySelector('.formulario')
         let inputsFotos = formulario.getElementsByTagName('input');        
         for(let i = 3; i<=12; i++){

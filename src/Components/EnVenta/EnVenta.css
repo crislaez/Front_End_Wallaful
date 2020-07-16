@@ -1,0 +1,40 @@
+.contenedor-en-venta{
+    width: 100%;
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+   
+}
+
+/* contenedor vacio */
+
+/* .contenedor-producto-vacio{
+    width: 96%;
+    height: 100px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 10px;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.div-imagen-vacia{
+    width: 10%;
+    height: 90px;
+    margin-top: 5px;
+    margin-left: 1%;
+    background: #F3F3F3;
+    border-radius: 5px;
+}
+
+.div-texto-vacio{
+    width: 10%;
+    height: 20px;
+    margin-left: 4%;
+    background: #F3F3F3;
+    margin-top: 40px;
+    border-radius: 5px;
+} */

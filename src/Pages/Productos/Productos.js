@@ -23,9 +23,7 @@ const Productos = (props) => {
     console.log(window.location.href.split('/')[window.location.href.split('/').length -1])
     return(
         <section className='section-productos'>
-            <div className='div-vacio'>
-            </div>
-
+      
             {
                 queVentanaMostrar === 'mizona'
                 ?
