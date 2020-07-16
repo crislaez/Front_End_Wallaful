@@ -1,7 +1,6 @@
 .contenedor-en-venta{
     width: 100%;
     min-height: 300px;
-
     display: flex;
     flex-direction: column;
    
@@ -9,19 +8,48 @@
 
 /* contenedor vacio */
 
-/* .contenedor-producto-vacio{
+.contenedor-producto{
     width: 96%;
     height: 100px;
     border-radius: 5px;
     margin: auto;
     margin-top: 10px;
-    background: white;
+    /* background: white; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.div-imagen-vacia{
+.div-check{
+    width: 7%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-check div{
+    width: 50%;
+}
+
+.div-check div input{
+    width: 70%;
+    height: 30px;
+}
+
+.div-derecha{
+    width: 93%;
+    height: 100px;
+    background: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.div-producto-imagen{
     width: 10%;
     height: 90px;
     margin-top: 5px;
@@ -30,11 +58,69 @@
     border-radius: 5px;
 }
 
-.div-texto-vacio{
-    width: 10%;
-    height: 20px;
-    margin-left: 4%;
-    background: #F3F3F3;
-    margin-top: 40px;
+.div-producto-imagen img{
+    width: 100%;
+    height: 100%;
     border-radius: 5px;
-} */
+}
+
+.div-precio-tipo-producto{
+    min-width: 30%;
+    height: 96px;
+    margin-top: 3px;
+    /* margin-left: 1%; */
+    /* background: black; */
+}
+
+.div-precio-tipo-producto p{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.div-fecha{
+    width: 20%;
+    height: 96px;
+    margin-top: 3px;
+    /* margin-left: 1%; */
+
+}
+
+.div-fecha p{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.div-borrar{
+    width: 30%;
+    height: 96px;
+    margin-top: 3px;
+    /* background: blue; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-borrar div {
+    width: 80%;
+    height: 50px;
+}
+
+.div-borrar div input{
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    background: #17BC9D;
+    color: white;
+    border: none;
+}
+
+.div-borrar div input:focus{
+    outline : none;
+}
+
+.div-borrar div input:hover{
+    background: #21947F;
+}

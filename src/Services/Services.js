@@ -12,3 +12,9 @@ export const login = (data) => {
 export const addProduct = (data) => {
     return fetch(process.env.REACT_APP_URL+'/api/addProduct',{method:'POST',body:data, headers:{authorization: `BEARER ${localStorage.getItem('wallafullroken')}`}}).then(data => data.json()) 
 }
+
+
+//todos los productos por id usuario
+export const getProductByIdUser = (data) => {
+    return fetch(process.env.REACT_APP_URL+'/api/getProductByIdUser/'+data,{method:'GET'}).then(data => data.json())
+}
