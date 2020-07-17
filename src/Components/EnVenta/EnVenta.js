@@ -6,7 +6,7 @@ import {withRouter} from 'react-router-dom';
 //componentes
 import DivVacio from '../DivVacio/DivVacio';
 //Services
-import {getProductByIdUser} from '../../Services/Services';
+import {getProductByIdUser,removeProductByIdProduct} from '../../Services/Services';
 //alerta
 import swal from 'sweetalert';
 
@@ -33,23 +33,29 @@ const EnVenta = (props) => {
         .catch(err => console.log(err))
     };
 
-    const handleClickCheck = (event) => {
-        console.log(event.target.checked)
-        // console.log(id_producto);
-    }
-
+    //funcioon para borrar el producto
     const handleClickBotonBorrar = (event,id_producto) => {
         let div = event.target.parentNode.parentNode.parentNode.parentNode.getElementsByTagName('div')[0]
         let botonCheck = div.getElementsByTagName('input')
 
+        console.log(id_producto)
         if(botonCheck[0].checked){
             //si borrar  la varaible del localStorage
             if(localStorage.getItem('primariwallafull')){
-                swal('Ook','Producto borrado','success');
-                obtenerPeroductosEnVenta(localStorage.getItem('primariwallafull'));
+                removeProductByIdProduct(id_producto)
+                .then(response => {
+                    if(response.success){
+                        swal('Ook','Producto borrado','success');
+                        obtenerPeroductosEnVenta(localStorage.getItem('primariwallafull'));
+                    }else{
+                        swal('Oops','Error al borrar el producto','error')
+                    }
+                })
+                .catch(err => console.log(err))
+                
             }else{
                 props.history.push('/inicio');
-                window.location.reaload(true);
+                window.location.reload(true);
             }
            
         }else{
@@ -58,7 +64,7 @@ const EnVenta = (props) => {
         console.log(id_producto)
     };
     
-    console.log(arrayProductos)
+    // console.log(arrayProductos)
     return(
         <div className='contenedor-en-venta'>          
             {
@@ -84,7 +90,7 @@ const EnVenta = (props) => {
                                 </div>
 
                                 <div className='div-fecha'>
-                                    <p>12/12/2019</p>
+                                    <p>{dato.publicacion}</p>
                                 </div>
 
                                 <div className='div-borrar'>

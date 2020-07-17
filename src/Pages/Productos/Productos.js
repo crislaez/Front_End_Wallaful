@@ -7,7 +7,7 @@ import MisProductos from '../../Components/MisProductos/MisProductos';
 
 const Productos = (props) => {
 
-    const [queVentanaMostrar, setQueVentanaMostrar] = useState('mizona');
+    const [queVentanaMostrar, setQueVentanaMostrar] = useState('');
 
     useEffect( () => {
         //llamamos a la funcion de app
@@ -20,7 +20,7 @@ const Productos = (props) => {
         setQueVentanaMostrar(window.location.href.split('/')[window.location.href.split('/').length -1])
     },[])
 
-    console.log(window.location.href.split('/')[window.location.href.split('/').length -1])
+    // console.log(window.location.href.split('/')[window.location.href.split('/').length -1])
     return(
         <section className='section-productos'>
       
@@ -30,11 +30,10 @@ const Productos = (props) => {
                 <MisProductos></MisProductos>
                 :
                 queVentanaMostrar === 'subir'
-                ?
+                ?               
                 <SubirProducto></SubirProducto>
                 :
                 <div style={{display:'none'}}></div>
-
 
             }
         </section>

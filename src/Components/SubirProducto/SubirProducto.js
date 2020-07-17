@@ -9,6 +9,8 @@ import {arraCategorias, provincias} from '../../Services/arrayCategorias';
 import swal from 'sweetalert';
 //Services
 import {addProduct} from '../../Services/Services';
+//fechas
+import moment from 'moment';
 
 const SubirProducto = (props) => {
 
@@ -60,6 +62,8 @@ const SubirProducto = (props) => {
             swal('Oops','Selecciona la ubicacion','error')
         }
         else{
+            let now = moment().format("DD-MM-YYYY") 
+
             let data = new FormData();
             data.append('id_producto','');
             data.append('id_usuario',localStorage.getItem('primariwallafull'));
@@ -68,6 +72,7 @@ const SubirProducto = (props) => {
             data.append('precio',precio);
             data.append('moneda',moneda);
             data.append('descripcion',descripcion);
+            data.append('publicacion',now);
             data.append('foto_1',foto1);
             data.append('foto_2',foto2);
             data.append('foto_3',foto4);

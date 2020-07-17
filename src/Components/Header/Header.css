@@ -57,6 +57,12 @@ header{
     border: none;
 }
 
+.header-dos input:focus{
+    outline : none;
+}
+
+
+
 .header-dos input::placeholder{
     padding-left: 20px;
     font-size: 15px;

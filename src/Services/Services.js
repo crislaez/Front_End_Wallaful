@@ -18,3 +18,8 @@ export const addProduct = (data) => {
 export const getProductByIdUser = (data) => {
     return fetch(process.env.REACT_APP_URL+'/api/getProductByIdUser/'+data,{method:'GET'}).then(data => data.json())
 }
+
+//borrar producto
+export const removeProductByIdProduct = (data) => {
+    return fetch(process.env.REACT_APP_URL+'/api/removeProductByIdProduct/'+data,{method:'DELETE',headers:{authorization:`BEARER ${localStorage.getItem('wallafullroken')}`}}).then(data => data.json())
+}

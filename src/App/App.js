@@ -12,7 +12,7 @@ import DivLogueate from '../Components/DivLogueate/DivLogueate';
 import Inicio from '../Pages/Inicio/Inicio';
 import Mensajes from '../Pages/Mensajes/Mensajes';
 import Productos from '../Pages/Productos/Productos';
-
+import Perfil from '../Pages/Perfil/Perfil';
 
 const App = (props) => {
 
@@ -114,6 +114,12 @@ const App = (props) => {
                     funcionMostrarNavegadorLateral={funcionMostrarNavegadorLateral}
                     ></Productos></Route>
 
+                    <Route exact path='/perfil'>
+                    <Perfil       
+                    funcionCambiarColorMiZona={funcionCambiarColorMiZona}
+                    funcionMostrarNavegadorLateral={funcionMostrarNavegadorLateral}              
+                    ></Perfil></Route>
+                    
                     <Redirect from='/' to='/inicio'></Redirect>
                     <Route path='*'><div>ERROR 404</div></Route>
                 </Switch>
