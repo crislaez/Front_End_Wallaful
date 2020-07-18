@@ -1,0 +1,87 @@
+.formulario-cuenta{
+    width: 100%;
+    height: 450px;
+    margin-top: 20px;
+    background: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-cuenta div {
+    width: 100%;
+    margin-top: 20px;
+    /* background: blue; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.formulario-cuenta div div{
+    width: 40%;   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.formulario-cuenta div p{
+    margin-left: 10%;
+    margin-top: 20px;    
+}
+
+.formulario-cuenta div div p{
+    margin-top: 50px;
+    margin-left: 40%;
+}
+
+.formulario-cuenta div div input[type='date']{
+    width: 80%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #E1E1E1;
+    margin-top: 20px;
+}
+
+.formulario-cuenta div div div{
+    width: 40%;
+    margin: auto;
+    /* background: blueviolet; */
+}
+
+.formulario-cuenta div div input[type='button']{
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    margin-top: 0px;
+    border: 1px solid gray;
+    cursor: pointer;
+    background: none;
+}
+
+.div-boton-editar-cuenta{
+    margin: auto;
+    padding-top: 40px;
+}
+
+.formulario-cuenta div div input:focus{
+    outline: none;
+}
+
+.div-boton-editar-cuenta input{
+    width: 20%;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid #E1E1E1;
+    margin: auto;
+    background: #17BC9D;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    transition: all 300ms;
+}
+
+.div-boton-editar-cuenta input:hover{
+    background: #21947F;
+}

@@ -38,11 +38,11 @@ const EditarPerfil = (props) => {
 
             let datosUsuario = nombre+' '+apellido
             const data = new FormData();
-            data.append = ('foto_perfil',fotoPerfil);
-            data.append = ('foto_banner',fotoPortada);
-            data.append = ('nombre',datosUsuario);
+            data.append('foto_perfil',fotoPerfil);
+            data.append('foto_banner',fotoPortada);
+            data.append('nombre',datosUsuario);
             
-            updateUser(localStorage.getItem('primariwallafull'), data)
+            updateUser(parseInt(localStorage.getItem('primariwallafull')), data)
             .then(response => {
                 console.log(response);
                 if(response.success){

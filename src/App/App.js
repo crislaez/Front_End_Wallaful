@@ -26,7 +26,6 @@ const App = (props) => {
 
     //funcion para guardar los datos del usuatio
     const funcionArrayDatosUsuario = (datos) => {
-        console.log(datos);
         setArrayDatosUsuarioLogueado(datos)
     }
     //cambiar el border botton de mi zona
@@ -64,7 +63,7 @@ const App = (props) => {
         setMostrarBarraLateral(true)
     }
 
-
+console.log(arrayDatosUsuarioLogueado)
     return(
         <React.Fragment>
             <Header 
