@@ -21,5 +21,10 @@ export const getProductByIdUser = (data) => {
 
 //borrar producto
 export const removeProductByIdProduct = (data) => {
-    return fetch(process.env.REACT_APP_URL+'/api/removeProductByIdProduct/'+data,{method:'DELETE',headers:{authorization:`BEARER ${localStorage.getItem('wallafullroken')}`}}).then(data => data.json())
+    return fetch(process.env.REACT_APP_URL+'/api/removeProductByIdProduct/'+data,{method:'DELETE',headers:{authorization: `BEARER ${localStorage.getItem('wallafullroken')}`}}).then(data => data.json())
+}
+
+//actualizar imagenes i datos del usuario
+export const updateUser = (id, data) => {
+    return fetch(process.env.REACT_APP_URL+'/api/updateUser/'+id, {method:'PUT',body:data, headers:{authorization: `BEARER ${localStorage.getItem('wallafullroken')}`}}).then(data => data.json())
 }

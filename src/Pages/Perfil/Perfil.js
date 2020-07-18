@@ -1,6 +1,10 @@
 import React, {useState, useEffect} from 'react';
 //css
 import './Perfil.css';
+//ruta
+import {withRouter} from 'react-router-dom';
+//alertas
+import swal from 'sweetalert';
 //componentes
 import EditarPerfil from '../../Components/EditarPerfil/EdiarPerfil';
 import Cuenta from '../../Components/Cuenta/Cuenta';
@@ -39,13 +43,40 @@ const Perfil = (props) => {
         }
         
     };
+    
+    //boton para cerrar sesion 
+    const handleClickCerrarSesion = () => {
+        swal({
+                title: "Estas seguro?",
+                text: "Cerraras sesion!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                localStorage.removeItem('primariwallafull');
+                localStorage.removeItem('wallafullroken');
+                props.history.push('/inicio');
+            swal("Poof! Your imaginary file has been deleted!", {icon: "success",});
+            }
+        });
+        
+
+    }
 
     return(
         <section className='section-perfil'>
             <div className='contenedor-perfil'>
                 <div className='div-titulo-perfil'>
-                    <h2>Tu perfil</h2>
-                    <p>Aqui podras ver y editar los datos de tu perfil | Ver mi perfil publico</p>
+                    <div className='div-izqueirda-editar-perfil'>
+                        <h2>Tu perfil</h2>
+                        <p>Aqui podras ver y editar los datos de tu perfil | Ver mi perfil publico</p>
+                    </div>
+                    <div className='div-redecha-editar-perfil'>
+                        <input onClick={handleClickCerrarSesion} type='button' value='Cerrar sesion'></input>
+                    </div>
+                    
                 </div>
 
                 <div className='div-botones-perfil'>
@@ -72,4 +103,4 @@ const Perfil = (props) => {
     )
 }
 
-export default Perfil
+export default withRouter(Perfil)

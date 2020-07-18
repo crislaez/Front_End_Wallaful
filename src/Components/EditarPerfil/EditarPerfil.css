@@ -1,0 +1,57 @@
+.formulario-editar-perfil{
+    width: 100%;
+    height: 600px;
+    margin-top: 20px;
+    background: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-editar-perfil div{
+    width: 70%;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.formulario-editar-perfil div div{
+    width: 50%;
+}
+
+.formulario-editar-perfil div div p{
+    margin-left: 20%;
+    margin-top: 25px;
+    color: #5C5C5C;
+}
+
+.formulario-editar-perfil div div input{
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid #E1E1E1;
+    margin-top: 5px;
+}
+
+.formulario-editar-perfil input:focus{
+    outline: none;
+}
+
+.input-formulario-editar{
+    width: 30%;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid gray;
+    margin: auto;
+    background: #17BC9D;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    transition: all 300ms;
+}
+
+.input-formulario-editar:hover{
+    background: #21947F;
+}
