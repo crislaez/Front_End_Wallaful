@@ -28,3 +28,13 @@ export const removeProductByIdProduct = (data) => {
 export const updateUser = (id, data) => {
     return fetch(process.env.REACT_APP_URL+'/api/updateUser/'+id, {method:'PUT',body:data, headers:{authorization: `BEARER ${localStorage.getItem('wallafullroken')}`}}).then(data => data.json())
 }
+
+//actualizar datos de la cuenta
+export const updateAccountUser = (id, data) => {
+    return fetch(process.env.REACT_APP_URL+'/api/updateAccountUser/'+id, {method:'PUT', body:data, headers:{authorization: `BEARER ${localStorage.getItem('wallafullroken')}`}}).then(data => data.json())
+}
+
+//mostrar producto por ide producto
+export const getProductByIdProduct = (id) => {
+    return fetch(process.env.REACT_APP_URL+'/api/getProductByIdProduct/'+id,{method:'GET'}).then(data => data.json())
+}

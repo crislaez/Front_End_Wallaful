@@ -13,6 +13,8 @@ import Inicio from '../Pages/Inicio/Inicio';
 import Mensajes from '../Pages/Mensajes/Mensajes';
 import Productos from '../Pages/Productos/Productos';
 import Perfil from '../Pages/Perfil/Perfil';
+import Item from '../Pages/Item/Item';
+
 
 const App = (props) => {
 
@@ -58,6 +60,7 @@ const App = (props) => {
     const funcionOcultarNavegadorLateral = () => {
         setMostrarBarraLateral(false);
     }
+
     //ocultar navegador lateral
     const funcionMostrarNavegadorLateral = () => {
         setMostrarBarraLateral(true)
@@ -101,6 +104,11 @@ console.log(arrayDatosUsuarioLogueado)
                     funcionOcultarNavegadorLateral={funcionOcultarNavegadorLateral}
                     ></Inicio></Route>
 
+                    <Route exact path='/item/:id'>
+                    <Item 
+                    funcionOcultarNavegadorLateral={funcionOcultarNavegadorLateral}
+                    ></Item></Route>
+
                     <Route exact path='/mensaje'>
                     <Mensajes 
                     funcionCambiarColorMensaje={funcionCambiarColorMensaje} 
@@ -117,9 +125,10 @@ console.log(arrayDatosUsuarioLogueado)
                     <Perfil       
                     funcionCambiarColorMiZona={funcionCambiarColorMiZona}
                     funcionMostrarNavegadorLateral={funcionMostrarNavegadorLateral}              
-                    ></Perfil></Route>
+                    ></Perfil></Route>                    
                     
                     <Redirect from='/' to='/inicio'></Redirect>
+
                     <Route path='*'><div>ERROR 404</div></Route>
                 </Switch>
             </div>

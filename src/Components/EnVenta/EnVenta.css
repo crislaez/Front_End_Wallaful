@@ -44,7 +44,7 @@
     border-radius: 5px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
 }
 
 .div-producto-imagen{
@@ -54,6 +54,7 @@
     margin-left: 1%;
     background: #F3F3F3;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .div-producto-imagen img{

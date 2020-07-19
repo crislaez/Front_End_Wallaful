@@ -3,8 +3,10 @@ import React, {useState, useEffect} from 'react';
 import './Cuenta.css';
 //alertas
 import swal from 'sweetalert';
+//rutas
+import {withRouter} from 'react-router-dom';
 //services
-import {} from '../../Services/Services';
+import {updateAccountUser} from '../../Services/Services';
 
 const Cuenta = (props) => {
 
@@ -45,8 +47,27 @@ const Cuenta = (props) => {
         else{
             console.log(nacimiento);
             console.log(bSexo);
+
+            let data = new URLSearchParams(`nacimiento=${nacimiento}&sexo=${bSexo}`);
+
+            updateAccountUser(parseInt(localStorage.getItem('primariwallafull')), data)
+            .then(response => {
+                console.log(response)
+                if(response.success){
+                    swal('Ook','Datos actualizados','success');
+                    props.history.push('/productos/mizona');
+                }else{
+                    swal('Oops','Error al actualizar los datos','error')
+                }
+            })
+            .catch(err => console.log(err))
         }       
-        
+        setNacimiento('');
+        setBSexo('');
+        setColorBHombre('none');
+        setColorTextoBHombre('#5C5C5C');
+        setColorMujer('none');
+        setColorTextoBMujer('#5C5C5C');
     }
 
     return(
@@ -82,4 +103,4 @@ const Cuenta = (props) => {
     )
 }
 
-export default Cuenta
+export default withRouter(Cuenta);

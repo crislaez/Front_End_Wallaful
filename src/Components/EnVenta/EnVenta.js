@@ -63,6 +63,11 @@ const EnVenta = (props) => {
         }
         console.log(id_producto)
     };
+
+    //redireccion a item/:id
+    const handleCLickVerProducto = (id_producto) => {
+        props.history.push('/item/'+id_producto);
+    };
     
     // console.log(arrayProductos)
     return(
@@ -80,7 +85,7 @@ const EnVenta = (props) => {
                             </div>
 
                             <div className='div-derecha'>
-                                <div className='div-producto-imagen'>
+                                <div onClick={() => handleCLickVerProducto(dato.id_producto)} className='div-producto-imagen'>
                                     <img src={dato.foto_1} alt='foto_1'></img>
                                 </div>
 
