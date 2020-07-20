@@ -4,12 +4,16 @@
     background: #F3F3F3;   
 }
 
+.div-vacio-item{
+    width: 100%;
+    height: 40px;
+}
+
 .div-centro-item{
     width: 45%;
-    min-height: 700px;    
+    min-height: 1000px;    
     background: white;
     margin: auto;
-    /* margin-top: 40px; */
     display: flex;
     flex-direction: column;
     border-radius: 5px;    
@@ -25,8 +29,9 @@
 }
 
 .div-primero-item div{
+    margin-top: 5px;
     width: 30%;
-    background: burlywood;
+    /* background: burlywood; */
 }
 
 .imagen-item{
@@ -54,4 +59,102 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.div-botones-item div{
+    width: 37%;
+    height: 80px;
+    /* background: violet; */
+}
+
+.div-botones-item div button, .div-botones-item div input{
+    width:100%;
+    height: 45px;
+    border-radius: 30px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms;
+    font-size: 18px;
+}
+
+.div-botones-item div button, .div-botones-item div input:focus{
+    outline: none;
+}
+
+.div-botones-item div input{
+    background: #17BC9D;
+    color: white;
+}
+
+.div-botones-item div button:hover{
+    background: #E45F5F;
+}
+
+.div-botones-item div input:hover{
+    background: #21947F;
+}
+
+.div-imagen-item{
+    width: 94%;
+    margin: auto;
+    margin-top: 20px;
+    height: 530px;
+    margin-bottom: 20px;
+    /* background: blueviolet; */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.div-imagen-item img{
+    width: 100%;
+    height: 530px;
+}
+
+.div-precio-item{
+    width: 94%;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.div-precio-item p{
+    font-size: 40px;
+    color: #17BC9D;
+    font-weight: bold;
+}
+
+.div-datos-item{
+    width: 94%;
+    height: 70px;
+    margin: auto;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #E7E7E7;
+    margin-top: 0px;
+}
+
+.div-datos-item p{
+    font-size: 40px;
+}
+
+.descripcion-item{
+    width: 94%;
+    min-height: 70px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #E7E7E7;
+}
+
+.publicacion-producto{
+    width: 94%;
+    min-height: 70px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.publicacion-producto p{
+    color: #A1A1A1;
 }

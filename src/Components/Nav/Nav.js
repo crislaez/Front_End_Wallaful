@@ -4,7 +4,7 @@ import './Nav.css';
 import {withRouter} from 'react-router-dom';
 //font awesome
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faCommentDots, faGrinBeam, faHeart, faStar} from '@fortawesome/free-regular-svg-icons'
+import {faCommentDots, faGrinBeam, faHeart, faStar} from '@fortawesome/free-regular-svg-icons';
 import {faAlignLeft, faChartBar} from '@fortawesome/free-solid-svg-icons';
 
 

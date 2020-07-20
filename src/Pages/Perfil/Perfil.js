@@ -9,6 +9,7 @@ import swal from 'sweetalert';
 import EditarPerfil from '../../Components/EditarPerfil/EdiarPerfil';
 import Cuenta from '../../Components/Cuenta/Cuenta';
 
+
 const Perfil = (props) => {
 
     const [cargarComponentesPerfilCuenta, setCargarComponentesPerfilCuenta] = useState(true);
@@ -58,12 +59,12 @@ const Perfil = (props) => {
                 localStorage.removeItem('primariwallafull');
                 localStorage.removeItem('wallafullroken');
                 props.history.push('/inicio');
+                window.location.reload(true);
             swal("Poof! Your imaginary file has been deleted!", {icon: "success",});
-            }
-        });
-        
 
-    }
+            }
+        });  
+    };
 
     return(
         <section className='section-perfil'>

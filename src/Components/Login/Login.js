@@ -43,6 +43,7 @@ const Login = (props) => {
                     funcionCerrarDivLogin();
                     const funcionArrayDatosUsuario = props.funcionArrayDatosUsuario;
                     funcionArrayDatosUsuario(response.data[0])
+                    window.location.reload(true)
                 }else{
                     swal('Oops','Email o contraseña incorrectos','error')
                 }
