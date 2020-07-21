@@ -1,6 +1,8 @@
 import React,{useState, useEffect} from 'react';
 //css
 import './Inicio.css';
+//componente
+import NavInicioNavInicio from '../../Components/NavInicio/NavInicio';
 
 const Inicio = (props) => {
 
@@ -14,7 +16,7 @@ const Inicio = (props) => {
     
     return(
         <section className='section-inicio'>
-            <h2>INICIO</h2>
+            <NavInicioNavInicio></NavInicioNavInicio>
         </section>
     )
 }

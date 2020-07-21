@@ -14,7 +14,7 @@ import Mensajes from '../Pages/Mensajes/Mensajes';
 import Productos from '../Pages/Productos/Productos';
 import Perfil from '../Pages/Perfil/Perfil';
 import Item from '../Pages/Item/Item';
-
+import Articulos from '../Pages/Articulos/Articulos';
 
 const App = (props) => {
 
@@ -125,7 +125,13 @@ console.log(arrayDatosUsuarioLogueado)
                     <Perfil       
                     funcionCambiarColorMiZona={funcionCambiarColorMiZona}
                     funcionMostrarNavegadorLateral={funcionMostrarNavegadorLateral}              
-                    ></Perfil></Route>                    
+                    ></Perfil></Route> 
+                    
+                    <Route exact path='/articulos/:tipo'>
+                    <Articulos       
+                    funcionCambiarColorMiZona={funcionCambiarColorMiZona}
+                    funcionMostrarNavegadorLateral={funcionMostrarNavegadorLateral}              
+                    ></Articulos></Route> 
                     
                     <Redirect from='/' to='/inicio'></Redirect>
 

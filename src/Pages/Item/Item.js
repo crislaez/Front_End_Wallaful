@@ -18,12 +18,12 @@ const Item = (props) => {
 
     useEffect( () => {
 
-        setIdeProducto(window.location.href[window.location.href.length -1]);
+        setIdeProducto(window.location.href.split('/')[window.location.href.split('/').length -1]);
         //llamamos a la funcion que esta en app
         const funcionOcultarNavegadorLateral = props.funcionOcultarNavegadorLateral;
         funcionOcultarNavegadorLateral();
         //obtenemos los datos dle producto
-        obtenerProducto(window.location.href[window.location.href.length -1]);
+        obtenerProducto(window.location.href.split('/')[window.location.href.split('/').length -1]);
         
     },[idProducto]);
 
